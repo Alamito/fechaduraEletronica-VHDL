@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Alamito\Documents\fechaduraEletronica-VHDL\proj-final\simulation\qsim
+vreg4bits
+Z1 !s100 H@jlU2EGIPFn:6UKO_]J?2
+Z2 IjhoM;g^BVH5zA5XFDd0BN1
+Z3 Vgb_z3S4X8>8F[GkWzY1bH3
+Z4 dC:\Users\Alamito\Documents\fechaduraEletronica-VHDL\proj-final\simulation\qsim
+Z5 w1680271033
+Z6 8proj-final.vo
+Z7 Fproj-final.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|proj-final.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1680271034.738000
+Z12 !s107 proj-final.vo|
+!s101 -O0
+vreg4bits_vlg_check_tst
+!i10b 1
+Z13 !s100 lb8h:f>@HP3J5F19Nh4:J3
+Z14 IaZ6bihb<?n53iZWGT0;<i0
+Z15 VibRU3Tj^@O3TRLjKkV5:;3
+R4
+Z16 w1680271031
+Z17 8reg4bits.vwf.vt
+Z18 Freg4bits.vwf.vt
+L0 67
+R8
+r1
+!s85 0
+31
+Z19 !s108 1680271034.863000
+Z20 !s107 reg4bits.vwf.vt|
+Z21 !s90 -work|work|reg4bits.vwf.vt|
+!s101 -O0
+R10
+vreg4bits_vlg_sample_tst
+!i10b 1
+Z22 !s100 5OeACEG>5mMk^On>en@111
+Z23 I8V9HRP`<KMBcCm7z25MX20
+Z24 VMO2feEDzA?jAcbHQKOLjG3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vreg4bits_vlg_vec_tst
+!i10b 1
+!s100 [NDG`5686`iEG9U0EV^=73
+IYQGFGdOU15ejmXAE@zG8T0
+Z25 V^dFQdWZVF`DocII@3D9hT2
+R4
+R16
+R17
+R18
+Z26 L0 215
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

@@ -1,0 +1,51 @@
+|reg4bits
+S[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => inst4.CLK
+load => mux2to1:inst5.c
+load => mux2to1:inst6.c
+load => mux2to1:inst7.c
+load => mux2to1:inst8.c
+D0 => mux2to1:inst5.e1
+D1 => mux2to1:inst6.e1
+D2 => mux2to1:inst7.e1
+D3 => mux2to1:inst8.e1
+
+
+|reg4bits|mux2to1:inst5
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
+|reg4bits|mux2to1:inst6
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
+|reg4bits|mux2to1:inst7
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
+|reg4bits|mux2to1:inst8
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
