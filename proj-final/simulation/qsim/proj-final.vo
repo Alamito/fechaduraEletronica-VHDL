@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "03/31/2023 19:06:28"
+// DATE "03/31/2023 19:42:11"
 
 // 
 // Device: Altera EP3C16F484C6 Package FBGA484
@@ -28,42 +28,19 @@
 
 `timescale 1 ps/ 1 ps
 
-module reg_decod (
-	S,
-	D3,
-	D2,
-	D1,
-	D0,
-	btn_dir,
-	btn_mid,
-	Btn_esq,
-	SWITCH,
-	CLK);
-output 	[3:0] S;
-input 	D3;
-input 	D2;
-input 	D1;
-input 	D0;
-input 	btn_dir;
-input 	btn_mid;
-input 	Btn_esq;
-input 	SWITCH;
+module cont2bits (
+	CLK,
+	button,
+	S);
 input 	CLK;
+input 	button;
+output 	[1:0] S;
 
 // Design Ports Information
-// S[3]	=>  Location: PIN_H2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// S[2]	=>  Location: PIN_F7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// S[1]	=>  Location: PIN_L6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// S[0]	=>  Location: PIN_P8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// D0	=>  Location: PIN_L8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// S[0]	=>  Location: PIN_J1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// S[1]	=>  Location: PIN_H1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// button	=>  Location: PIN_J2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // CLK	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// SWITCH	=>  Location: PIN_A3,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// btn_dir	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// btn_mid	=>  Location: PIN_J1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Btn_esq	=>  Location: PIN_J2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// D1	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// D2	=>  Location: PIN_H1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// D3	=>  Location: PIN_W7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -77,69 +54,21 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \S[3]~output_o ;
-wire \S[2]~output_o ;
-wire \S[1]~output_o ;
 wire \S[0]~output_o ;
+wire \S[1]~output_o ;
 wire \CLK~input_o ;
 wire \CLK~inputclkctrl_outclk ;
-wire \D0~input_o ;
-wire \Btn_esq~input_o ;
-wire \btn_mid~input_o ;
-wire \btn_dir~input_o ;
-wire \SWITCH~input_o ;
-wire \inst|inst9~0_combout ;
-wire \inst2|inst~q ;
-wire \D1~input_o ;
-wire \inst2|inst2~q ;
-wire \D2~input_o ;
-wire \inst2|inst3~q ;
-wire \D3~input_o ;
-wire \inst2|inst4~q ;
+wire \button~input_o ;
+wire \pressed~feeder_combout ;
+wire \pressed~q ;
+wire \count[0]~0_combout ;
+wire \count[1]~1_combout ;
+wire [1:0] count;
 
 
-// Location: IOOBUF_X0_Y21_N9
-cycloneiii_io_obuf \S[3]~output (
-	.i(\inst2|inst~q ),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\S[3]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \S[3]~output .bus_hold = "false";
-defparam \S[3]~output .open_drain_output = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X1_Y29_N9
-cycloneiii_io_obuf \S[2]~output (
-	.i(\inst2|inst2~q ),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\S[2]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \S[2]~output .bus_hold = "false";
-defparam \S[2]~output .open_drain_output = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X0_Y13_N2
-cycloneiii_io_obuf \S[1]~output (
-	.i(\inst2|inst3~q ),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\S[1]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \S[1]~output .bus_hold = "false";
-defparam \S[1]~output .open_drain_output = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X0_Y2_N16
+// Location: IOOBUF_X0_Y20_N9
 cycloneiii_io_obuf \S[0]~output (
-	.i(\inst2|inst4~q ),
+	.i(count[0]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -148,6 +77,19 @@ cycloneiii_io_obuf \S[0]~output (
 // synopsys translate_off
 defparam \S[0]~output .bus_hold = "false";
 defparam \S[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y21_N16
+cycloneiii_io_obuf \S[1]~output (
+	.i(count[1]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\S[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \S[1]~output .bus_hold = "false";
+defparam \S[1]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOIBUF_X0_Y14_N1
@@ -173,185 +115,126 @@ defparam \CLK~inputclkctrl .clock_type = "global clock";
 defparam \CLK~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y22_N1
-cycloneiii_io_ibuf \D0~input (
-	.i(D0),
-	.ibar(gnd),
-	.o(\D0~input_o ));
-// synopsys translate_off
-defparam \D0~input .bus_hold = "false";
-defparam \D0~input .simulate_z_as = "z";
-// synopsys translate_on
-
 // Location: IOIBUF_X0_Y20_N1
-cycloneiii_io_ibuf \Btn_esq~input (
-	.i(Btn_esq),
+cycloneiii_io_ibuf \button~input (
+	.i(button),
 	.ibar(gnd),
-	.o(\Btn_esq~input_o ));
+	.o(\button~input_o ));
 // synopsys translate_off
-defparam \Btn_esq~input .bus_hold = "false";
-defparam \Btn_esq~input .simulate_z_as = "z";
+defparam \button~input .bus_hold = "false";
+defparam \button~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y20_N8
-cycloneiii_io_ibuf \btn_mid~input (
-	.i(btn_mid),
-	.ibar(gnd),
-	.o(\btn_mid~input_o ));
-// synopsys translate_off
-defparam \btn_mid~input .bus_hold = "false";
-defparam \btn_mid~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X0_Y22_N8
-cycloneiii_io_ibuf \btn_dir~input (
-	.i(btn_dir),
-	.ibar(gnd),
-	.o(\btn_dir~input_o ));
-// synopsys translate_off
-defparam \btn_dir~input .bus_hold = "false";
-defparam \btn_dir~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X3_Y29_N1
-cycloneiii_io_ibuf \SWITCH~input (
-	.i(SWITCH),
-	.ibar(gnd),
-	.o(\SWITCH~input_o ));
-// synopsys translate_off
-defparam \SWITCH~input .bus_hold = "false";
-defparam \SWITCH~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X3_Y20_N8
-cycloneiii_lcell_comb \inst|inst9~0 (
+// Location: LCCOMB_X1_Y20_N0
+cycloneiii_lcell_comb \pressed~feeder (
 // Equation(s):
-// \inst|inst9~0_combout  = (!\Btn_esq~input_o  & (!\btn_mid~input_o  & (!\btn_dir~input_o  & \SWITCH~input_o )))
+// \pressed~feeder_combout  = \button~input_o 
 
-	.dataa(\Btn_esq~input_o ),
-	.datab(\btn_mid~input_o ),
-	.datac(\btn_dir~input_o ),
-	.datad(\SWITCH~input_o ),
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\button~input_o ),
 	.cin(gnd),
-	.combout(\inst|inst9~0_combout ),
+	.combout(\pressed~feeder_combout ),
 	.cout());
 // synopsys translate_off
-defparam \inst|inst9~0 .lut_mask = 16'h0100;
-defparam \inst|inst9~0 .sum_lutc_input = "datac";
+defparam \pressed~feeder .lut_mask = 16'hFF00;
+defparam \pressed~feeder .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X3_Y20_N1
-dffeas \inst2|inst (
+// Location: FF_X1_Y20_N1
+dffeas pressed(
 	.clk(\CLK~inputclkctrl_outclk ),
-	.d(gnd),
-	.asdata(\D0~input_o ),
+	.d(\pressed~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
-	.ena(\inst|inst9~0_combout ),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst2|inst~q ),
+	.q(\pressed~q ),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst2|inst .is_wysiwyg = "true";
-defparam \inst2|inst .power_up = "low";
+defparam pressed.is_wysiwyg = "true";
+defparam pressed.power_up = "low";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y10_N15
-cycloneiii_io_ibuf \D1~input (
-	.i(D1),
-	.ibar(gnd),
-	.o(\D1~input_o ));
+// Location: LCCOMB_X1_Y20_N16
+cycloneiii_lcell_comb \count[0]~0 (
+// Equation(s):
+// \count[0]~0_combout  = count[0] $ (((\button~input_o  & !\pressed~q )))
+
+	.dataa(gnd),
+	.datab(\button~input_o ),
+	.datac(count[0]),
+	.datad(\pressed~q ),
+	.cin(gnd),
+	.combout(\count[0]~0_combout ),
+	.cout());
 // synopsys translate_off
-defparam \D1~input .bus_hold = "false";
-defparam \D1~input .simulate_z_as = "z";
+defparam \count[0]~0 .lut_mask = 16'hF03C;
+defparam \count[0]~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X3_Y20_N3
-dffeas \inst2|inst2 (
+// Location: FF_X1_Y20_N17
+dffeas \count[0] (
 	.clk(\CLK~inputclkctrl_outclk ),
-	.d(gnd),
-	.asdata(\D1~input_o ),
+	.d(\count[0]~0_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
-	.ena(\inst|inst9~0_combout ),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst2|inst2~q ),
+	.q(count[0]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst2|inst2 .is_wysiwyg = "true";
-defparam \inst2|inst2 .power_up = "low";
+defparam \count[0] .is_wysiwyg = "true";
+defparam \count[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y21_N15
-cycloneiii_io_ibuf \D2~input (
-	.i(D2),
-	.ibar(gnd),
-	.o(\D2~input_o ));
+// Location: LCCOMB_X1_Y20_N2
+cycloneiii_lcell_comb \count[1]~1 (
+// Equation(s):
+// \count[1]~1_combout  = count[1] $ (((\button~input_o  & (!\pressed~q  & count[0]))))
+
+	.dataa(\button~input_o ),
+	.datab(\pressed~q ),
+	.datac(count[1]),
+	.datad(count[0]),
+	.cin(gnd),
+	.combout(\count[1]~1_combout ),
+	.cout());
 // synopsys translate_off
-defparam \D2~input .bus_hold = "false";
-defparam \D2~input .simulate_z_as = "z";
+defparam \count[1]~1 .lut_mask = 16'hD2F0;
+defparam \count[1]~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X3_Y20_N13
-dffeas \inst2|inst3 (
+// Location: FF_X1_Y20_N3
+dffeas \count[1] (
 	.clk(\CLK~inputclkctrl_outclk ),
-	.d(gnd),
-	.asdata(\D2~input_o ),
+	.d(\count[1]~1_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
-	.ena(\inst|inst9~0_combout ),
+	.sload(gnd),
+	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst2|inst3~q ),
+	.q(count[1]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst2|inst3 .is_wysiwyg = "true";
-defparam \inst2|inst3 .power_up = "low";
+defparam \count[1] .is_wysiwyg = "true";
+defparam \count[1] .power_up = "low";
 // synopsys translate_on
-
-// Location: IOIBUF_X9_Y0_N15
-cycloneiii_io_ibuf \D3~input (
-	.i(D3),
-	.ibar(gnd),
-	.o(\D3~input_o ));
-// synopsys translate_off
-defparam \D3~input .bus_hold = "false";
-defparam \D3~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: FF_X3_Y20_N23
-dffeas \inst2|inst4 (
-	.clk(\CLK~inputclkctrl_outclk ),
-	.d(gnd),
-	.asdata(\D3~input_o ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(vcc),
-	.ena(\inst|inst9~0_combout ),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst2|inst4~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst2|inst4 .is_wysiwyg = "true";
-defparam \inst2|inst4 .power_up = "low";
-// synopsys translate_on
-
-assign S[3] = \S[3]~output_o ;
-
-assign S[2] = \S[2]~output_o ;
-
-assign S[1] = \S[1]~output_o ;
 
 assign S[0] = \S[0]~output_o ;
+
+assign S[1] = \S[1]~output_o ;
 
 endmodule
