@@ -1,4 +1,79 @@
-|decod4x16
+|reg_decod
+S[0] <= reg4bits:inst2.S[0]
+S[1] <= reg4bits:inst2.S[1]
+S[2] <= reg4bits:inst2.S[2]
+S[3] <= reg4bits:inst2.S[3]
+D3 => reg4bits:inst2.D3
+D2 => reg4bits:inst2.D2
+D1 => reg4bits:inst2.D1
+D0 => reg4bits:inst2.D0
+btn_dir => decod4x16:inst.I0
+btn_mid => decod4x16:inst.I1
+Btn_esq => decod4x16:inst.I2
+SWITCH => decod4x16:inst.I3
+CLK => reg4bits:inst2.CLK
+
+
+|reg_decod|reg4bits:inst2
+S[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => inst4.CLK
+load => mux2to1:inst5.c
+load => mux2to1:inst6.c
+load => mux2to1:inst7.c
+load => mux2to1:inst8.c
+D0 => mux2to1:inst5.e1
+D1 => mux2to1:inst6.e1
+D2 => mux2to1:inst7.e1
+D3 => mux2to1:inst8.e1
+
+
+|reg_decod|reg4bits:inst2|mux2to1:inst5
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
+|reg_decod|reg4bits:inst2|mux2to1:inst6
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
+|reg_decod|reg4bits:inst2|mux2to1:inst7
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
+|reg_decod|reg4bits:inst2|mux2to1:inst8
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
+|reg_decod|mux2to1:inst3
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+c => inst1.IN0
+c => inst3.IN0
+e1 => inst1.IN1
+e0 => inst.IN0
+
+
+|reg_decod|decod4x16:inst
 S0000 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 I3 => inst22.IN0
 I3 => inst26.IN0

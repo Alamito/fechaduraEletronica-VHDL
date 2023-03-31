@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proj-final
-Fri Mar 31 15:41:43 2023
+Fri Mar 31 19:04:53 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 31 15:41:43 2023      ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 31 19:04:53 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; proj-final                                 ;
-; Top-level Entity Name              ; decod4x16                                  ;
+; Top-level Entity Name              ; reg_decod                                  ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 16                                         ;
-;     Total combinational functions  ; 16                                         ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 20                                         ;
+; Total logic elements               ; 5                                          ;
+;     Total combinational functions  ; 1                                          ;
+;     Dedicated logic registers      ; 4                                          ;
+; Total registers                    ; 4                                          ;
+; Total pins                         ; 13                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; decod4x16          ; proj-final         ;
+; Top-level entity name                                                      ; reg_decod          ; proj-final         ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,52 +162,57 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
-; decod4x16.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/decod4x16.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
+; reg4bits.bdf                     ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/reg4bits.bdf  ;         ;
+; decod4x16.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/decod4x16.bdf ;         ;
+; reg_decod.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/reg_decod.bdf ;         ;
+; mux2to1.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/mux2to1.bdf   ;         ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 16       ;
-;                                             ;          ;
-; Total combinational functions               ; 16       ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 16       ;
-;     -- 3 input functions                    ; 0        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 16       ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 20       ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-; Maximum fan-out node                        ; I0~input ;
-; Maximum fan-out                             ; 16       ;
-; Total fan-out                               ; 100      ;
-; Average fan-out                             ; 1.79     ;
-+---------------------------------------------+----------+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimated Total logic elements              ; 5                      ;
+;                                             ;                        ;
+; Total combinational functions               ; 1                      ;
+; Logic element usage by number of LUT inputs ;                        ;
+;     -- 4 input functions                    ; 1                      ;
+;     -- 3 input functions                    ; 0                      ;
+;     -- <=2 input functions                  ; 0                      ;
+;                                             ;                        ;
+; Logic elements by mode                      ;                        ;
+;     -- normal mode                          ; 1                      ;
+;     -- arithmetic mode                      ; 0                      ;
+;                                             ;                        ;
+; Total registers                             ; 4                      ;
+;     -- Dedicated logic registers            ; 4                      ;
+;     -- I/O registers                        ; 0                      ;
+;                                             ;                        ;
+; I/O pins                                    ; 13                     ;
+; Embedded Multiplier 9-bit elements          ; 0                      ;
+; Maximum fan-out node                        ; decod4x16:inst|inst9~0 ;
+; Maximum fan-out                             ; 4                      ;
+; Total fan-out                               ; 33                     ;
+; Average fan-out                             ; 1.06                   ;
++---------------------------------------------+------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |decod4x16                 ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |decod4x16          ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |reg_decod                 ; 1 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |reg_decod                ; work         ;
+;    |decod4x16:inst|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod|decod4x16:inst ; work         ;
+;    |reg4bits:inst2|        ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod|reg4bits:inst2 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -216,12 +221,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -231,7 +236,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -241,7 +246,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Mar 31 15:41:37 2023
+    Info: Processing started: Fri Mar 31 19:04:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj-final -c proj-final
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file proj-final.bdf
@@ -250,7 +255,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file reg4bit
     Info (12023): Found entity 1: reg4bits
 Info (12021): Found 1 design units, including 1 entities, in source file decod4x16.bdf
     Info (12023): Found entity 1: decod4x16
-Info (12127): Elaborating entity "decod4x16" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file reg_decod.bdf
+    Info (12023): Found entity 1: reg_decod
+Info (12127): Elaborating entity "reg_decod" for the top level hierarchy
+Info (12128): Elaborating entity "reg4bits" for hierarchy "reg4bits:inst2"
+Warning (12125): Using design file mux2to1.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mux2to1
+Info (12128): Elaborating entity "mux2to1" for hierarchy "reg4bits:inst2|mux2to1:inst5"
+Info (12128): Elaborating entity "decod4x16" for hierarchy "decod4x16:inst"
 Warning (275011): Block or symbol "NOT" of instance "inst22" overlaps another block or symbol
 Warning (275011): Block or symbol "NOT" of instance "inst26" overlaps another block or symbol
 Warning (275011): Block or symbol "NOT" of instance "inst30" overlaps another block or symbol
@@ -258,14 +270,14 @@ Warning (275011): Block or symbol "NOT" of instance "inst29" overlaps another bl
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 16 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 5 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4624 megabytes
-    Info: Processing ended: Fri Mar 31 15:41:44 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Fri Mar 31 19:04:53 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

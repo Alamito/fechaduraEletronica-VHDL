@@ -1,5 +1,5 @@
 Flow report for proj-final
-Fri Mar 31 15:43:19 2023
+Fri Mar 31 19:06:28 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 31 15:43:19 2023      ;
+; Flow Status                        ; Successful - Fri Mar 31 19:06:28 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; proj-final                                 ;
-; Top-level Entity Name              ; decod4x16                                  ;
+; Top-level Entity Name              ; reg_decod                                  ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 16 / 15,408 ( < 1 % )                      ;
-;     Total combinational functions  ; 16 / 15,408 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                         ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 20 / 347 ( 6 % )                           ;
+; Total logic elements               ; 5 / 15,408 ( < 1 % )                       ;
+;     Total combinational functions  ; 1 / 15,408 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 4 / 15,408 ( < 1 % )                       ;
+; Total registers                    ; 4                                          ;
+; Total pins                         ; 13 / 347 ( 4 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/31/2023 15:41:38 ;
+; Start date & time ; 03/31/2023 19:04:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proj-final          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 31032335591043.168028809811172                                                  ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 31032335591043.168030029113128                                                  ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                              ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                     ; --            ; --          ; eda_simulation ;
@@ -83,11 +83,11 @@ applicable agreement for further details.
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                               ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                            ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                                                                        ; --            ; decod4x16   ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                           ; --            ; decod4x16   ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                                          ; --            ; decod4x16   ; Top            ;
+; PARTITION_COLOR                     ; 16764057                                                                        ; --            ; reg_decod   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                           ; --            ; reg_decod   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                          ; --            ; reg_decod   ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                    ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; decod4x16                                                                       ; proj-final    ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; reg_decod                                                                       ; proj-final    ; --          ; --             ;
 +-------------------------------------+---------------------------------------------------------------------------------+---------------+-------------+----------------+
 
 
@@ -96,14 +96,14 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4615 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:20     ; 1.0                     ; 5133 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4590 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 4643 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4542 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4557 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4553 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:41     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4615 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:14     ; 1.1                     ; 5176 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4590 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 4655 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4541 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4553 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4553 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:33     ; --                      ; --                  ; 00:00:22                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -130,7 +130,7 @@ quartus_fit --read_settings_files=off --write_settings_files=off proj-final -c p
 quartus_asm --read_settings_files=off --write_settings_files=off proj-final -c proj-final
 quartus_sta proj-final -c proj-final
 quartus_eda --read_settings_files=off --write_settings_files=off proj-final -c proj-final
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog proj-final -c proj-final --vector_source=C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/decod4x16.vwf --testbench_file=C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim/decod4x16.vwf.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog proj-final -c proj-final --vector_source=C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/reg_decod.vwf --testbench_file=C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim/reg_decod.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim/ proj-final -c proj-final
 
 
