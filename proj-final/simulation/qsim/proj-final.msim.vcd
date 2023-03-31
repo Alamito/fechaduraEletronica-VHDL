@@ -3,7 +3,7 @@ $comment
 		vcd file proj-final.msim.vcd -direction
 $end
 $date
-	Fri Mar 31 10:57:15 2023
+	Fri Mar 31 15:43:26 2023
 $end
 $version
 	ModelSim Version 10.1d
@@ -11,614 +11,138 @@ $end
 $timescale
 	1ps
 $end
-$scope module reg4bits_vlg_vec_tst $end
-$var reg 1 ! CLK $end
-$var reg 1 " D0 $end
-$var reg 1 # D1 $end
-$var reg 1 $ D2 $end
-$var reg 1 % D3 $end
-$var reg 1 & load $end
-$var wire 1 ' S [3] $end
-$var wire 1 ( S [2] $end
-$var wire 1 ) S [1] $end
-$var wire 1 * S [0] $end
-$var wire 1 + sampler $end
+$scope module decod4x16_vlg_vec_tst $end
+$var reg 1 ! I0 $end
+$var reg 1 " I1 $end
+$var reg 1 # I2 $end
+$var reg 1 $ I3 $end
+$var wire 1 % S0000 $end
+$var wire 1 & S0001 $end
+$var wire 1 ' S0010 $end
+$var wire 1 ( S0011 $end
+$var wire 1 ) S0100 $end
+$var wire 1 * S0101 $end
+$var wire 1 + S0110 $end
+$var wire 1 , S0111 $end
+$var wire 1 - S1000 $end
+$var wire 1 . S1001 $end
+$var wire 1 / S1010 $end
+$var wire 1 0 S1011 $end
+$var wire 1 1 S1100 $end
+$var wire 1 2 S1101 $end
+$var wire 1 3 S1110 $end
+$var wire 1 4 S1111 $end
+$var wire 1 5 sampler $end
 $scope module i1 $end
-$var wire 1 , gnd $end
-$var wire 1 - vcc $end
-$var wire 1 . unknown $end
-$var tri1 1 / devclrn $end
-$var tri1 1 0 devpor $end
-$var tri1 1 1 devoe $end
-$var wire 1 2 S[3]~output_o $end
-$var wire 1 3 S[2]~output_o $end
-$var wire 1 4 S[1]~output_o $end
-$var wire 1 5 S[0]~output_o $end
-$var wire 1 6 CLK~input_o $end
-$var wire 1 7 CLK~inputclkctrl_outclk $end
-$var wire 1 8 D0~input_o $end
-$var wire 1 9 inst~feeder_combout $end
-$var wire 1 : load~input_o $end
-$var wire 1 ; inst~q $end
-$var wire 1 < D1~input_o $end
-$var wire 1 = inst2~feeder_combout $end
-$var wire 1 > inst2~q $end
-$var wire 1 ? D2~input_o $end
-$var wire 1 @ inst3~q $end
-$var wire 1 A D3~input_o $end
-$var wire 1 B inst4~q $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < S0000~output_o $end
+$var wire 1 = S0001~output_o $end
+$var wire 1 > S0010~output_o $end
+$var wire 1 ? S0011~output_o $end
+$var wire 1 @ S0100~output_o $end
+$var wire 1 A S0101~output_o $end
+$var wire 1 B S0110~output_o $end
+$var wire 1 C S0111~output_o $end
+$var wire 1 D S1000~output_o $end
+$var wire 1 E S1001~output_o $end
+$var wire 1 F S1010~output_o $end
+$var wire 1 G S1011~output_o $end
+$var wire 1 H S1100~output_o $end
+$var wire 1 I S1101~output_o $end
+$var wire 1 J S1110~output_o $end
+$var wire 1 K S1111~output_o $end
+$var wire 1 L I1~input_o $end
+$var wire 1 M I2~input_o $end
+$var wire 1 N I0~input_o $end
+$var wire 1 O I3~input_o $end
+$var wire 1 P inst~0_combout $end
+$var wire 1 Q inst~1_combout $end
+$var wire 1 R inst~2_combout $end
+$var wire 1 S inst~3_combout $end
+$var wire 1 T inst~4_combout $end
+$var wire 1 U inst~5_combout $end
+$var wire 1 V inst~6_combout $end
+$var wire 1 W inst~7_combout $end
+$var wire 1 X inst~8_combout $end
+$var wire 1 Y inst~9_combout $end
+$var wire 1 Z inst~10_combout $end
+$var wire 1 [ inst~11_combout $end
+$var wire 1 \ inst~12_combout $end
+$var wire 1 ] inst~13_combout $end
+$var wire 1 ^ inst~14_combout $end
+$var wire 1 _ inst~15_combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 1!
-1"
-0#
-1$
-0%
-1&
-0*
-0)
-0(
-0'
-x+
-0,
-1-
-x.
-1/
-10
-11
-02
-03
-04
-05
-16
-17
-18
-19
-1:
-0;
-0<
-0=
-0>
-1?
-0@
-0A
-0B
-$end
-#10000
-0!
-06
-07
-0+
-#20000
-1!
-16
-17
-1+
-1@
-1;
-14
-12
-1)
-1'
-#30000
-0&
-0!
-0:
-06
-07
-0+
-#40000
-1!
-16
-17
-1+
-#50000
-0!
-06
-07
-0+
-#60000
-1!
-16
-17
-1+
-#70000
-0!
-06
-07
-0+
-#80000
-1!
-16
-17
-1+
-#90000
-0!
-06
-07
-0+
-#100000
-1!
-16
-17
-1+
-#110000
-0!
-06
-07
-0+
-#120000
-1!
-16
-17
-1+
-#130000
-0!
-06
-07
-0+
-#140000
-1!
-16
-17
-1+
-#150000
-0!
-06
-07
-0+
-#160000
-1!
-16
-17
-1+
-#170000
-0!
-06
-07
-0+
-#180000
-1!
-16
-17
-1+
-#190000
-0!
-06
-07
-0+
-#200000
-1!
-16
-17
-1+
-#210000
-0!
-06
-07
-0+
-#220000
-1!
-16
-17
-1+
-#230000
-0!
-06
-07
-0+
-#240000
-1!
-16
-17
-1+
-#250000
-0!
-06
-07
-0+
-#260000
-1!
-16
-17
-1+
-#270000
-0!
-06
-07
-0+
-#280000
-1!
-16
-17
-1+
-#290000
-0!
-06
-07
-0+
-#300000
-1!
-16
-17
-1+
-#310000
-0!
-06
-07
-0+
-#320000
-1!
-16
-17
-1+
-#330000
-0!
-06
-07
-0+
-#340000
-1!
-16
-17
-1+
-#350000
-0!
-06
-07
-0+
-#360000
-1!
-16
-17
-1+
-#370000
-0!
-06
-07
-0+
-#380000
-1!
-16
-17
-1+
-#390000
-0!
-06
-07
-0+
-#400000
-1!
-16
-17
-1+
-#410000
-0!
-06
-07
-0+
-#420000
 0"
 1#
 0$
-1%
-1!
-08
-1<
-0?
-1A
-16
-17
-1+
-09
-1=
-#430000
-1&
-0!
-1:
-06
-07
-0+
-#440000
-1!
-16
-17
-1+
-1B
-0@
-1>
-0;
-15
-04
-13
-02
-1*
-0)
-1(
-0'
-#450000
-0&
-0!
-0:
-06
-07
-0+
-#460000
-1!
-16
-17
-1+
-#470000
-0!
-06
-07
-0+
-#480000
-0#
 0%
-1!
+0&
+0'
+0(
+0)
+1*
+0+
+0,
+0-
+0.
+0/
+00
+01
+02
+03
+04
+x5
+06
+17
+x8
+19
+1:
+1;
 0<
-0A
-16
-17
-1+
 0=
-#490000
-0!
-06
-07
-0+
-#500000
-1!
-16
-17
-1+
-#510000
-0!
-06
-07
-0+
-#520000
-1!
-16
-17
-1+
-#530000
-0!
-06
-07
-0+
-#540000
-1!
-16
-17
-1+
-#550000
-0!
-06
-07
-0+
-#560000
-1!
-16
-17
-1+
-#570000
-0!
-06
-07
-0+
-#580000
-1!
-16
-17
-1+
-#590000
-0!
-06
-07
-0+
-#600000
-1!
-16
-17
-1+
-#610000
-0!
-06
-07
-0+
-#620000
-1!
-16
-17
-1+
-#630000
-0!
-06
-07
-0+
-#640000
-1!
-16
-17
-1+
-#650000
-0!
-06
-07
-0+
-#660000
-1!
-16
-17
-1+
-#670000
-0!
-06
-07
-0+
-#680000
-1!
-16
-17
-1+
-#690000
-0!
-06
-07
-0+
-#700000
-1!
-16
-17
-1+
-#710000
-0!
-06
-07
-0+
-#720000
-1!
-16
-17
-1+
-#730000
-0!
-06
-07
-0+
-#740000
-1!
-16
-17
-1+
-#750000
-0!
-06
-07
-0+
-#760000
-1!
-16
-17
-1+
-#770000
-0!
-06
-07
-0+
-#780000
-1!
-16
-17
-1+
-#790000
-0!
-06
-07
-0+
-#800000
-1!
-16
-17
-1+
-#810000
-0!
-06
-07
-0+
-#820000
-1!
-16
-17
-1+
-#830000
-0!
-06
-07
-0+
-#840000
-1!
-16
-17
-1+
-#850000
-0!
-06
-07
-0+
-#860000
-1!
-16
-17
-1+
-#870000
-0!
-06
-07
-0+
-#880000
-1!
-16
-17
-1+
-#890000
-0!
-06
-07
-0+
-#900000
-1!
-16
-17
-1+
-#910000
-0!
-06
-07
-0+
-#920000
-1!
-16
-17
-1+
-#930000
-0!
-06
-07
-0+
-#940000
-1!
-16
-17
-1+
-#950000
-0!
-06
-07
-0+
-#960000
-1!
-16
-17
-1+
-#970000
-0!
-06
-07
-0+
-#980000
-1!
-16
-17
-1+
-#990000
-0!
-06
-07
-0+
+0>
+0?
+0@
+1A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+1M
+1N
+0O
+0P
+0Q
+0R
+0S
+0T
+1U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+$end
 #1000000

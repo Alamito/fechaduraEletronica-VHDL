@@ -3,79 +3,195 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\Alamito\Documents\fechaduraEletronica-VHDL\proj-final\simulation\qsim
-vreg4bits
-Z1 !s100 H@jlU2EGIPFn:6UKO_]J?2
-Z2 IjhoM;g^BVH5zA5XFDd0BN1
-Z3 Vgb_z3S4X8>8F[GkWzY1bH3
-Z4 dC:\Users\Alamito\Documents\fechaduraEletronica-VHDL\proj-final\simulation\qsim
-Z5 w1680271033
-Z6 8proj-final.vo
-Z7 Fproj-final.vo
+vBlock1
+Z1 IA4oa]K=:>O5HnhZmQ5<553
+Z2 V39Q^Hc1QNkl>mP<LGK;FM3
+Z3 dC:\Users\Alamito\Documents\fechaduraEletronica-VHDL\proj-final\simulation\qsim
+Z4 w1680274438
+Z5 8proj-final.vo
+Z6 Fproj-final.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|proj-final.vo|
-Z10 o-work work -O0
+Z8 !s90 -work|work|proj-final.vo|
+Z9 o-work work -O0
+Z10 n@block1
+Z11 !s100 @;n204U90?8zGShD14NU_1
+Z12 !s108 1680274440.964000
+Z13 !s107 proj-final.vo|
 !i10b 1
 !s85 0
-Z11 !s108 1680271034.738000
-Z12 !s107 proj-final.vo|
+!s101 -O0
+vBlock1_vlg_sample_tst
+Z14 I[HAb:^fHF3SlH>XI2O<An0
+Z15 V]N^I6021SGDn];N2aUb1?0
+R3
+Z16 w1680274436
+Z17 8Waveform.vwf.vt
+Z18 FWaveform.vwf.vt
+L0 29
+R7
+r1
+31
+R9
+Z19 n@block1_vlg_sample_tst
+Z20 !s100 _lfAYXVbQf@4laR<Ahb1]0
+Z21 !s108 1680274441.158000
+Z22 !s107 Waveform.vwf.vt|
+Z23 !s90 -work|work|Waveform.vwf.vt|
+!i10b 1
+!s85 0
+!s101 -O0
+vdecod4x16
+Z24 I17EhWLkJl3zV>Y@DA?ZeC2
+Z25 VLfn_gCTI7Z12:8YDY=Jbc1
+R3
+Z26 w1680288199
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+!i10b 1
+Z27 !s100 jedD=1CXbLVXGe=a<k74G3
+!s85 0
+Z28 !s108 1680288203.957000
+R13
+!s101 -O0
+vdecod4x16_vlg_check_tst
+!i10b 1
+!s100 0EjQ^L]Pzf7P;[IEN>VeQ3
+IjF19jY69R@5P]=^hBj:XA1
+V=e]gA2FQkNMYA4L;MWD]i1
+R3
+Z29 w1680288197
+Z30 8decod4x16.vwf.vt
+Z31 Fdecod4x16.vwf.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z32 !s108 1680288204.378000
+Z33 !s107 decod4x16.vwf.vt|
+Z34 !s90 -work|work|decod4x16.vwf.vt|
+!s101 -O0
+R9
+vdecod4x16_vlg_sample_tst
+!i10b 1
+!s100 <3LBXi]0c;I@KK4E`;jH^0
+I@<NhT<HYRi5c5H0<TiZl[3
+VlVK2k72;kYIgcOhajoN3[1
+R3
+R29
+R30
+R31
+L0 29
+R7
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+R9
+vdecod4x16_vlg_vec_tst
+!i10b 1
+!s100 Rf@fW?6ePz66mnJfDBo>l1
+Izn;R^n^>cI7>Y>]7Sjm3d1
+V6mC3J3iz`TSaGEzzFH@KB0
+R3
+R29
+R30
+R31
+L0 563
+R7
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+R9
+vreg4bits
+Z35 !s100 H@jlU2EGIPFn:6UKO_]J?2
+Z36 IjhoM;g^BVH5zA5XFDd0BN1
+Z37 Vgb_z3S4X8>8F[GkWzY1bH3
+R3
+Z38 w1680271033
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z39 !s108 1680271034.738000
+R13
+!i10b 1
+!s85 0
 !s101 -O0
 vreg4bits_vlg_check_tst
-!i10b 1
-Z13 !s100 lb8h:f>@HP3J5F19Nh4:J3
-Z14 IaZ6bihb<?n53iZWGT0;<i0
-Z15 VibRU3Tj^@O3TRLjKkV5:;3
-R4
-Z16 w1680271031
-Z17 8reg4bits.vwf.vt
-Z18 Freg4bits.vwf.vt
+Z40 !s100 lb8h:f>@HP3J5F19Nh4:J3
+Z41 IaZ6bihb<?n53iZWGT0;<i0
+Z42 VibRU3Tj^@O3TRLjKkV5:;3
+R3
+Z43 w1680271031
+Z44 8reg4bits.vwf.vt
+Z45 Freg4bits.vwf.vt
 L0 67
-R8
+R7
 r1
-!s85 0
 31
-Z19 !s108 1680271034.863000
-Z20 !s107 reg4bits.vwf.vt|
-Z21 !s90 -work|work|reg4bits.vwf.vt|
+Z46 !s108 1680271034.863000
+Z47 !s107 reg4bits.vwf.vt|
+Z48 !s90 -work|work|reg4bits.vwf.vt|
+R9
+!i10b 1
+!s85 0
 !s101 -O0
-R10
 vreg4bits_vlg_sample_tst
-!i10b 1
-Z22 !s100 5OeACEG>5mMk^On>en@111
-Z23 I8V9HRP`<KMBcCm7z25MX20
-Z24 VMO2feEDzA?jAcbHQKOLjG3
-R4
-R16
-R17
-R18
+Z49 !s100 5OeACEG>5mMk^On>en@111
+Z50 I8V9HRP`<KMBcCm7z25MX20
+Z51 VMO2feEDzA?jAcbHQKOLjG3
+R3
+R43
+R44
+R45
 L0 29
-R8
+R7
 r1
-!s85 0
 31
-R19
-R20
-R21
-!s101 -O0
-R10
-vreg4bits_vlg_vec_tst
+R46
+R47
+R48
+R9
 !i10b 1
-!s100 [NDG`5686`iEG9U0EV^=73
-IYQGFGdOU15ejmXAE@zG8T0
-Z25 V^dFQdWZVF`DocII@3D9hT2
-R4
-R16
-R17
-R18
-Z26 L0 215
-R8
-r1
 !s85 0
-31
-R19
-R20
-R21
 !s101 -O0
-R10
+vreg4bits_vlg_vec_tst
+Z52 IYQGFGdOU15ejmXAE@zG8T0
+Z53 V^dFQdWZVF`DocII@3D9hT2
+R3
+R43
+R44
+R45
+Z54 L0 215
+R7
+r1
+31
+R46
+R47
+R48
+R9
+Z55 !s100 [NDG`5686`iEG9U0EV^=73
+!i10b 1
+!s85 0
+!s101 -O0
