@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/31/2023 19:06:24"
+// Generated on "04/01/2023 10:23:07"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    reg_decod
 // 
@@ -30,28 +30,30 @@ module reg_decod_vlg_sample_tst(
 	btn_dir,
 	Btn_esq,
 	btn_mid,
+	change_pass,
 	CLK,
+	close_safe,
 	D0,
 	D1,
 	D2,
 	D3,
-	SWITCH,
 	sampler_tx
 );
 input  btn_dir;
 input  Btn_esq;
 input  btn_mid;
+input  change_pass;
 input  CLK;
+input  close_safe;
 input  D0;
 input  D1;
 input  D2;
 input  D3;
-input  SWITCH;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(btn_dir or Btn_esq or btn_mid or CLK or D0 or D1 or D2 or D3 or SWITCH)
+always @(btn_dir or Btn_esq or btn_mid or change_pass or CLK or close_safe or D0 or D1 or D2 or D3)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -224,12 +226,13 @@ module reg_decod_vlg_vec_tst();
 reg btn_dir;
 reg Btn_esq;
 reg btn_mid;
+reg change_pass;
 reg CLK;
+reg close_safe;
 reg D0;
 reg D1;
 reg D2;
 reg D3;
-reg SWITCH;
 // wires                                               
 wire [3:0] S;
 
@@ -241,13 +244,14 @@ reg_decod i1 (
 	.btn_dir(btn_dir),
 	.Btn_esq(Btn_esq),
 	.btn_mid(btn_mid),
+	.change_pass(change_pass),
 	.CLK(CLK),
+	.close_safe(close_safe),
 	.D0(D0),
 	.D1(D1),
 	.D2(D2),
 	.D3(D3),
-	.S(S),
-	.SWITCH(SWITCH)
+	.S(S)
 );
 
 // CLK
@@ -262,6 +266,10 @@ end
 initial
 begin
 	btn_dir = 1'b0;
+	btn_dir = #130000 1'b1;
+	btn_dir = #40000 1'b0;
+	btn_dir = #330000 1'b1;
+	btn_dir = #40000 1'b0;
 end 
 
 // Btn_esq
@@ -276,47 +284,67 @@ begin
 	btn_mid = 1'b0;
 end 
 
-// SWITCH
+// change_pass
 initial
 begin
-	SWITCH = 1'b0;
-	SWITCH = #380000 1'b1;
+	change_pass = 1'b0;
+	change_pass = #130000 1'b1;
+	change_pass = #40000 1'b0;
+	change_pass = #330000 1'b1;
+	change_pass = #50000 1'b0;
+end 
+
+// close_safe
+initial
+begin
+	close_safe = 1'b0;
 end 
 
 // D0
 initial
 begin
-	D0 = 1'b1;
+	D0 = 1'b0;
+	D0 = #130000 1'b1;
+	D0 = #50000 1'b0;
 end 
 
 // D1
 initial
 begin
 	D1 = 1'b0;
+	D1 = #510000 1'b1;
+	D1 = #40000 1'b0;
 end 
 
 // D2
 initial
 begin
-	D2 = 1'b1;
+	D2 = 1'b0;
+	D2 = #130000 1'b1;
+	D2 = #60000 1'b0;
+	D2 = #320000 1'b1;
+	D2 = #40000 1'b0;
 end 
 
 // D3
 initial
 begin
 	D3 = 1'b0;
+	D3 = #510000 1'b1;
+	D3 = #40000 1'b0;
 end 
 
 reg_decod_vlg_sample_tst tb_sample (
 	.btn_dir(btn_dir),
 	.Btn_esq(Btn_esq),
 	.btn_mid(btn_mid),
+	.change_pass(change_pass),
 	.CLK(CLK),
+	.close_safe(close_safe),
 	.D0(D0),
 	.D1(D1),
 	.D2(D2),
 	.D3(D3),
-	.SWITCH(SWITCH),
 	.sampler_tx(sampler)
 );
 
