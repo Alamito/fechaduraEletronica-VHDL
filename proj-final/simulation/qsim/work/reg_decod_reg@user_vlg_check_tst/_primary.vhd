@@ -2,10 +2,8 @@ library verilog;
 use verilog.vl_types.all;
 entity reg_decod_regUser_vlg_check_tst is
     port(
-        Q0              : in     vl_logic;
-        Q1              : in     vl_logic;
-        Q2              : in     vl_logic;
-        Q3              : in     vl_logic;
+        comp            : in     vl_logic;
+        reg_user        : in     vl_logic_vector(3 downto 0);
         S               : in     vl_logic_vector(3 downto 0);
         sampler_rx      : in     vl_logic
     );

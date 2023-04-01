@@ -21,11 +21,11 @@
 # Loading cycloneiii_ver.cycloneiii_clkctrl
 # Loading cycloneiii_ver.cycloneiii_mux41
 # Loading cycloneiii_ver.cycloneiii_ena_reg
-# Loading altera_ver.dffeas
 # Loading cycloneiii_ver.cycloneiii_lcell_comb
+# Loading altera_ver.dffeas
 # Loading work.reg_decod_regUser_vlg_sample_tst
 # Loading work.reg_decod_regUser_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : reg_decod_regUser.vwf.vt(317)
+# ** Note: $finish    : reg_decod_regUser.vwf.vt(316)
 #    Time: 1 us  Iteration: 0  Instance: /reg_decod_regUser_vlg_vec_tst/tb_out
