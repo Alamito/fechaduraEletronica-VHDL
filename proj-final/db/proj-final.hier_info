@@ -1,10 +1,78 @@
-|cont2bits
+|regUser4bits
+Q0 <= reg1bit:inst1.S
+CLK => reg1bit:inst1.CLK
+CLK => cont2bits:inst.CLK
+CLK => reg1bit:inst4.CLK
+CLK => reg1bit:inst5.CLK
+CLK => reg1bit:inst6.CLK
+botaoInc => inst8.IN0
+botaoInc => inst9.IN0
+botaoInc => inst12.IN0
+botaoInc => inst13.IN0
+btn_troca => cont2bits:inst.button
+Q1 <= reg1bit:inst4.S
+Q2 <= reg1bit:inst5.S
+Q3 <= reg1bit:inst6.S
+
+
+|regUser4bits|reg1bit:inst1
+CLK => pressed.CLK
+CLK => count[0].CLK
+CLK => count[1].CLK
+input => process_0.IN1
+input => pressed.OUTPUTSELECT
+S <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regUser4bits|decod2x4:inst2
+S11 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst5.IN0
+I1 => inst3.IN0
+I1 => inst28.IN0
+I1 => inst24.IN0
+I0 => inst5.IN1
+I0 => inst33.IN0
+I0 => inst1.IN1
+I0 => inst25.IN0
+S10 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S01 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+S00 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regUser4bits|cont2bits:inst
 CLK => pressed.CLK
 CLK => count[0].CLK
 CLK => count[1].CLK
 button => process_0.IN1
 button => pressed.OUTPUTSELECT
-S[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
-S[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+S0 <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+S1 <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regUser4bits|reg1bit:inst4
+CLK => pressed.CLK
+CLK => count[0].CLK
+CLK => count[1].CLK
+input => process_0.IN1
+input => pressed.OUTPUTSELECT
+S <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regUser4bits|reg1bit:inst5
+CLK => pressed.CLK
+CLK => count[0].CLK
+CLK => count[1].CLK
+input => process_0.IN1
+input => pressed.OUTPUTSELECT
+S <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regUser4bits|reg1bit:inst6
+CLK => pressed.CLK
+CLK => count[0].CLK
+CLK => count[1].CLK
+input => process_0.IN1
+input => pressed.OUTPUTSELECT
+S <= count[0].DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 168 96)
+	(rect 16 16 152 96)
 	(text "cont2bits" (rect 5 0 39 12)(font "Arial" ))
 	(text "inst" (rect 8 64 20 76)(font "Arial" ))
 	(port
@@ -38,13 +38,20 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
-		(pt 152 32)
+		(pt 136 32)
 		(output)
-		(text "S[1..0]" (rect 0 0 24 12)(font "Arial" ))
-		(text "S[1..0]" (rect 107 27 131 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32)(line_width 3))
+		(text "S0" (rect 0 0 10 12)(font "Arial" ))
+		(text "S0" (rect 105 27 115 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32)(line_width 1))
+	)
+	(port
+		(pt 136 48)
+		(output)
+		(text "S1" (rect 0 0 9 12)(font "Arial" ))
+		(text "S1" (rect 106 43 115 55)(font "Arial" ))
+		(line (pt 136 48)(pt 120 48)(line_width 1))
 	)
 	(drawing
-		(rectangle (rect 16 16 136 64)(line_width 1))
+		(rectangle (rect 16 16 120 64)(line_width 1))
 	)
 )

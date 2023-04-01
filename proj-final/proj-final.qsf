@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16F484C6
-set_global_assignment -name TOP_LEVEL_ENTITY cont2bits
+set_global_assignment -name TOP_LEVEL_ENTITY regUser4bits
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:27:34  MARCH 31, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -59,8 +59,15 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE decod4x16.vwf
 set_global_assignment -name BDF_FILE reg_decod.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE reg_decod.vwf
 set_global_assignment -name VHDL_FILE cont2bits.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE cont2bits.vwf
+set_global_assignment -name BDF_FILE decod2x4.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE decod2x4.vwf
+set_global_assignment -name BDF_FILE regUser4bits.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE regUser4bits.vwf
+set_global_assignment -name VHDL_FILE cont1bit.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE cont1bit.vwf
+set_global_assignment -name VHDL_FILE reg1bit.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE cont2bits.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
