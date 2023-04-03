@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proj-final
-Sun Apr 02 19:48:34 2023
+Sun Apr 02 22:23:23 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 02 19:48:34 2023      ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 02 22:23:23 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; proj-final                                 ;
 ; Top-level Entity Name              ; reg_decod_regUser                          ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 29                                         ;
-;     Total combinational functions  ; 24                                         ;
-;     Dedicated logic registers      ; 16                                         ;
-; Total registers                    ; 16                                         ;
-; Total pins                         ; 22                                         ;
+; Total logic elements               ; 23                                         ;
+;     Total combinational functions  ; 18                                         ;
+;     Dedicated logic registers      ; 18                                         ;
+; Total registers                    ; 18                                         ;
+; Total pins                         ; 16                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -174,9 +174,8 @@ applicable agreement for further details.
 ; reg1bit.vhd                      ; yes             ; User VHDL File                           ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/reg1bit.vhd           ;         ;
 ; reg_decod_regUser.bdf            ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/reg_decod_regUser.bdf ;         ;
 ; comparador.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/comparador.bdf        ;         ;
+; btn_Sincrono.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/btn_Sincrono.bdf      ;         ;
 ; mux2to1.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/mux2to1.bdf           ;         ;
-; display.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/display.bdf           ;         ;
-; mux8x1.bdf                       ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/mux8x1.bdf            ;         ;
 +----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
@@ -185,28 +184,28 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 29        ;
+; Estimated Total logic elements              ; 23        ;
 ;                                             ;           ;
-; Total combinational functions               ; 24        ;
+; Total combinational functions               ; 18        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 13        ;
-;     -- 3 input functions                    ; 11        ;
+;     -- 4 input functions                    ; 5         ;
+;     -- 3 input functions                    ; 13        ;
 ;     -- <=2 input functions                  ; 0         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 24        ;
+;     -- normal mode                          ; 18        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 16        ;
-;     -- Dedicated logic registers            ; 16        ;
+; Total registers                             ; 18        ;
+;     -- Dedicated logic registers            ; 18        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 22        ;
+; I/O pins                                    ; 16        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 16        ;
-; Total fan-out                               ; 160       ;
-; Average fan-out                             ; 1.90      ;
+; Maximum fan-out                             ; 18        ;
+; Total fan-out                               ; 126       ;
+; Average fan-out                             ; 1.85      ;
 +---------------------------------------------+-----------+
 
 
@@ -215,16 +214,9 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
-; |reg_decod_regUser         ; 24 (2)            ; 16 (1)       ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |reg_decod_regUser                                   ; work         ;
-;    |comparador:inst10|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|comparador:inst10                 ; work         ;
-;    |display:inst12|        ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|display:inst12                    ; work         ;
-;       |mux8x1:inst6|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|display:inst12|mux8x1:inst6       ; work         ;
-;       |mux8x1:inst7|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|display:inst12|mux8x1:inst7       ; work         ;
-;       |mux8x1:inst8|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|display:inst12|mux8x1:inst8       ; work         ;
-;       |mux8x1:inst97|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|display:inst12|mux8x1:inst97      ; work         ;
-;       |mux8x1:inst98|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|display:inst12|mux8x1:inst98      ; work         ;
-;       |mux8x1:inst99|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|display:inst12|mux8x1:inst99      ; work         ;
-;       |mux8x1:inst9|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|display:inst12|mux8x1:inst9       ; work         ;
+; |reg_decod_regUser         ; 18 (3)            ; 18 (1)       ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |reg_decod_regUser                                   ; work         ;
+;    |btn_Sincrono:inst7|    ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|btn_Sincrono:inst7                ; work         ;
+;    |comparador:inst10|     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|comparador:inst10                 ; work         ;
 ;    |reg4bits:inst1|        ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|reg4bits:inst1                    ; work         ;
 ;    |regUser4bits:inst2|    ; 10 (1)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|regUser4bits:inst2                ; work         ;
 ;       |cont2bits:inst|     ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |reg_decod_regUser|regUser4bits:inst2|cont2bits:inst ; work         ;
@@ -242,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
+; Total registers                              ; 18    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -257,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -267,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Apr 02 19:48:27 2023
+    Info: Processing started: Sun Apr 02 22:23:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj-final -c proj-final
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file proj-final.bdf
@@ -297,38 +289,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file reg_dec
     Info (12023): Found entity 1: reg_decod_regUser
 Info (12021): Found 1 design units, including 1 entities, in source file comparador.bdf
     Info (12023): Found entity 1: comparador
+Info (12021): Found 1 design units, including 1 entities, in source file display_todos.bdf
+    Info (12023): Found entity 1: display_todos
+Info (12021): Found 1 design units, including 1 entities, in source file btn_sincrono.bdf
+    Info (12023): Found entity 1: btn_Sincrono
+Info (12021): Found 1 design units, including 1 entities, in source file divisor_clock.bdf
+    Info (12023): Found entity 1: divisor_clock
 Info (12127): Elaborating entity "reg_decod_regUser" for the top level hierarchy
+Info (12128): Elaborating entity "btn_Sincrono" for hierarchy "btn_Sincrono:inst7"
 Info (12128): Elaborating entity "comparador" for hierarchy "comparador:inst10"
-Warning (275080): Converted elements in bus name "B" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "B[1]" to "B1"
-    Warning (275081): Converted element name(s) from "B[0]" to "B0"
-    Warning (275081): Converted element name(s) from "B[2]" to "B2"
-    Warning (275081): Converted element name(s) from "B[3]" to "B3"
-Warning (12125): Using design file mux2to1.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: mux2to1
-Info (12128): Elaborating entity "mux2to1" for hierarchy "comparador:inst10|mux2to1:inst5"
 Info (12128): Elaborating entity "regUser4bits" for hierarchy "regUser4bits:inst2"
 Info (12128): Elaborating entity "reg1bit" for hierarchy "regUser4bits:inst2|reg1bit:inst3"
 Info (12128): Elaborating entity "decod2x4" for hierarchy "regUser4bits:inst2|decod2x4:inst2"
 Info (12128): Elaborating entity "cont2bits" for hierarchy "regUser4bits:inst2|cont2bits:inst"
 Info (12128): Elaborating entity "reg4bits" for hierarchy "reg4bits:inst1"
-Warning (12125): Using design file display.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: display
-Info (12128): Elaborating entity "display" for hierarchy "display:inst12"
-Warning (12125): Using design file mux8x1.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: mux8x1
-Info (12128): Elaborating entity "mux8x1" for hierarchy "display:inst12|mux8x1:inst99"
+Warning (12125): Using design file mux2to1.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mux2to1
+Info (12128): Elaborating entity "mux2to1" for hierarchy "reg4bits:inst1|mux2to1:inst5"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 33 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 27 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4664 megabytes
-    Info: Processing ended: Sun Apr 02 19:48:34 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Sun Apr 02 22:23:23 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

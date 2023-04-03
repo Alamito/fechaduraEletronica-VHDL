@@ -27,5 +27,5 @@
 # Loading work.reg_decod_regUser_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : reg_decod_regUser.vwf.vt(510)
+# ** Note: $finish    : reg_decod_regUser.vwf.vt(370)
 #    Time: 1 us  Iteration: 0  Instance: /reg_decod_regUser_vlg_vec_tst/tb_out

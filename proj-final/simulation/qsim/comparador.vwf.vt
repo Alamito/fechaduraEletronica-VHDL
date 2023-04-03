@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/01/2023 19:47:15"
+// Generated on "04/02/2023 22:19:12"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    comparador
 // 
@@ -28,18 +28,24 @@
 `timescale 1 ps/ 1 ps
 module comparador_vlg_sample_tst(
 	A,
-	B,
+	B0,
+	B1,
+	B2,
+	B3,
 	load,
 	sampler_tx
 );
 input [3:0] A;
-input [3:0] B;
+input  B0;
+input  B1;
+input  B2;
+input  B3;
 input  load;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(A or B or load)
+always @(A or B0 or B1 or B2 or B3 or load)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -157,7 +163,10 @@ module comparador_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg [3:0] A;
-reg [3:0] B;
+reg B0;
+reg B1;
+reg B2;
+reg B3;
 reg load;
 // wires                                               
 wire S;
@@ -168,7 +177,10 @@ wire sampler;
 comparador i1 (
 // port map - connection between master ports and signals/registers   
 	.A(A),
-	.B(B),
+	.B0(B0),
+	.B1(B1),
+	.B2(B2),
+	.B3(B3),
 	.load(load),
 	.S(S)
 );
@@ -192,37 +204,43 @@ initial
 begin
 	A[0] = 1'b0;
 end 
-// B[ 3 ]
+
+// B3
 initial
 begin
-	B[3] = 1'b1;
+	B3 = 1'b1;
 end 
-// B[ 2 ]
+
+// B2
 initial
 begin
-	B[2] = 1'b0;
+	B2 = 1'b0;
 end 
-// B[ 1 ]
+
+// B1
 initial
 begin
-	B[1] = 1'b1;
+	B1 = 1'b1;
 end 
-// B[ 0 ]
+
+// B0
 initial
 begin
-	B[0] = 1'b0;
+	B0 = 1'b0;
 end 
 
 // load
 initial
 begin
-	load = 1'b0;
-	load = #420000 1'b1;
+	load = 1'b1;
 end 
 
 comparador_vlg_sample_tst tb_sample (
 	.A(A),
-	.B(B),
+	.B0(B0),
+	.B1(B1),
+	.B2(B2),
+	.B3(B3),
 	.load(load),
 	.sampler_tx(sampler)
 );

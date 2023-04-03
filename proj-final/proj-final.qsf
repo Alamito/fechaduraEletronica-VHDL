@@ -73,6 +73,11 @@ set_global_assignment -name BDF_FILE reg_decod_regUser.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE reg_decod_regUser.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE reg1bit.vwf
 set_global_assignment -name BDF_FILE comparador.bdf
+set_global_assignment -name BDF_FILE display_todos.bdf
+set_global_assignment -name BDF_FILE btn_Sincrono.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE btn_sincrono.vwf
+set_global_assignment -name BDF_FILE divisor_clock.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE comparador.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
