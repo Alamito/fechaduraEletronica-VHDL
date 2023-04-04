@@ -133,9 +133,57 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1128 224 1304 240)
+	(rect 1672 248 1848 264)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "reg_user[3..0]" (rect 90 0 158 12)(font "Arial" ))
+	(text "SAIDAE[6..0]" (rect 90 0 156 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1672 264 1848 280)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "SAIDAMD[6..0]" (rect 90 0 165 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1672 280 1848 296)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "SAIDAME[6..0]" (rect 90 0 164 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1672 296 1848 312)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "SAIDAD[6..0]" (rect 90 0 157 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -636,6 +684,49 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 80 144))
 	)
 )
+(symbol
+	(rect 1480 224 1656 352)
+	(text "display_todos" (rect 5 0 84 14)(font "Arial" (font_size 8)))
+	(text "inst12" (rect 8 112 37 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "D[3..0]" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "D[3..0]" (rect 21 27 57 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "SAIDAE[6..0]" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "SAIDAE[6..0]" (rect 82 27 155 41)(font "Arial" (font_size 8)))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(port
+		(pt 176 48)
+		(output)
+		(text "SAIDAMD[6..0]" (rect 0 0 83 14)(font "Arial" (font_size 8)))
+		(text "SAIDAMD[6..0]" (rect 72 43 155 57)(font "Arial" (font_size 8)))
+		(line (pt 176 48)(pt 160 48)(line_width 3))
+	)
+	(port
+		(pt 176 64)
+		(output)
+		(text "SAIDAME[6..0]" (rect 0 0 82 14)(font "Arial" (font_size 8)))
+		(text "SAIDAME[6..0]" (rect 73 59 155 73)(font "Arial" (font_size 8)))
+		(line (pt 176 64)(pt 160 64)(line_width 3))
+	)
+	(port
+		(pt 176 80)
+		(output)
+		(text "SAIDAD[6..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "SAIDAD[6..0]" (rect 81 75 155 89)(font "Arial" (font_size 8)))
+		(line (pt 176 80)(pt 160 80)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 112))
+	)
+)
 (connector
 	(pt 384 120)
 	(pt 360 120)
@@ -667,41 +758,6 @@ applicable agreement for further details.
 (connector
 	(pt 512 88)
 	(pt 688 88)
-)
-(connector
-	(pt 1120 232)
-	(pt 1128 232)
-	(bus)
-)
-(connector
-	(pt 1104 232)
-	(pt 1120 232)
-	(bus)
-)
-(connector
-	(pt 1080 232)
-	(pt 1104 232)
-	(bus)
-)
-(connector
-	(pt 1056 232)
-	(pt 1080 232)
-	(bus)
-)
-(connector
-	(text "reg_user[3]" (rect 1104 175 1116 230)(font "Arial" )(vertical))
-	(pt 1120 104)
-	(pt 1120 232)
-)
-(connector
-	(text "reg_user[2]" (rect 1088 175 1100 230)(font "Arial" )(vertical))
-	(pt 1104 128)
-	(pt 1104 232)
-)
-(connector
-	(text "reg_user[1]" (rect 1064 175 1076 230)(font "Arial" )(vertical))
-	(pt 1080 160)
-	(pt 1080 232)
 )
 (connector
 	(pt 88 104)
@@ -834,10 +890,6 @@ applicable agreement for further details.
 (connector
 	(pt 48 304)
 	(pt 160 304)
-)
-(connector
-	(pt 1312 464)
-	(pt 1312 -24)
 )
 (connector
 	(pt 1312 -24)
@@ -992,11 +1044,6 @@ applicable agreement for further details.
 	(pt 936 -40)
 )
 (connector
-	(text "reg_user[0]" (rect 1040 175 1052 230)(font "Arial" )(vertical))
-	(pt 1056 232)
-	(pt 1056 192)
-)
-(connector
 	(pt 1016 24)
 	(pt 1016 280)
 	(bus)
@@ -1025,49 +1072,16 @@ applicable agreement for further details.
 	(pt 936 192)
 )
 (connector
-	(pt 600 192)
-	(pt 936 192)
-)
-(connector
 	(pt 960 -24)
 	(pt 960 160)
-)
-(connector
-	(pt 632 160)
-	(pt 960 160)
-)
-(connector
-	(pt 960 160)
-	(pt 1080 160)
 )
 (connector
 	(pt 984 -8)
 	(pt 984 128)
 )
 (connector
-	(pt 656 128)
-	(pt 984 128)
-)
-(connector
-	(pt 984 128)
-	(pt 1104 128)
-)
-(connector
-	(pt 936 192)
-	(pt 1056 192)
-)
-(connector
 	(pt 1000 8)
 	(pt 1000 104)
-)
-(connector
-	(text "<<__$DEF_ALIAS5032>>" (rect 698 80 821 92)(font "Arial" )(invisible))
-	(pt 688 104)
-	(pt 1000 104)
-)
-(connector
-	(pt 1000 104)
-	(pt 1120 104)
 )
 (connector
 	(pt 864 40)
@@ -1081,6 +1095,108 @@ applicable agreement for further details.
 	(pt 1136 -40)
 	(pt 1176 -40)
 )
+(connector
+	(pt 1656 256)
+	(pt 1672 256)
+	(bus)
+)
+(connector
+	(pt 1656 272)
+	(pt 1672 272)
+	(bus)
+)
+(connector
+	(pt 1656 288)
+	(pt 1672 288)
+	(bus)
+)
+(connector
+	(pt 1656 304)
+	(pt 1672 304)
+	(bus)
+)
+(connector
+	(pt 1312 -24)
+	(pt 1312 464)
+)
+(connector
+	(pt 1440 104)
+	(pt 1440 256)
+)
+(connector
+	(pt 688 104)
+	(pt 1000 104)
+)
+(connector
+	(text "D[3]" (rect 1138 88 1159 100)(font "Arial" ))
+	(pt 1000 104)
+	(pt 1440 104)
+)
+(connector
+	(text "D[3..0]" (rect 1338 240 1372 252)(font "Arial" ))
+	(pt 1480 256)
+	(pt 1440 256)
+	(bus)
+)
+(connector
+	(pt 1352 192)
+	(pt 1352 256)
+)
+(connector
+	(pt 600 192)
+	(pt 936 192)
+)
+(connector
+	(text "D[0]" (rect 1066 176 1087 188)(font "Arial" ))
+	(pt 936 192)
+	(pt 1352 192)
+)
+(connector
+	(pt 1352 256)
+	(pt 1328 256)
+	(bus)
+)
+(connector
+	(pt 1384 256)
+	(pt 1384 160)
+)
+(connector
+	(pt 1352 256)
+	(pt 1384 256)
+	(bus)
+)
+(connector
+	(pt 632 160)
+	(pt 960 160)
+)
+(connector
+	(text "D[1]" (rect 1090 144 1111 156)(font "Arial" ))
+	(pt 960 160)
+	(pt 1384 160)
+)
+(connector
+	(pt 1416 256)
+	(pt 1416 128)
+)
+(connector
+	(pt 1384 256)
+	(pt 1416 256)
+	(bus)
+)
+(connector
+	(pt 1416 256)
+	(pt 1440 256)
+	(bus)
+)
+(connector
+	(pt 656 128)
+	(pt 984 128)
+)
+(connector
+	(text "D[2]" (rect 1114 112 1135 124)(font "Arial" ))
+	(pt 984 128)
+	(pt 1416 128)
+)
 (junction (pt 360 464))
 (junction (pt 600 192))
 (junction (pt 688 104))
@@ -1088,9 +1204,6 @@ applicable agreement for further details.
 (junction (pt 632 160))
 (junction (pt 656 128))
 (junction (pt 1016 280))
-(junction (pt 1120 232))
-(junction (pt 1104 232))
-(junction (pt 1080 232))
 (junction (pt 696 464))
 (junction (pt 1448 -40))
 (junction (pt 648 0))
@@ -1102,7 +1215,10 @@ applicable agreement for further details.
 (junction (pt 960 160))
 (junction (pt 984 128))
 (junction (pt 1000 104))
-(text "SAIDA DE TESTE" (rect 1168 208 1264 222)(font "Arial" (font_size 8)))
+(junction (pt 1440 256))
+(junction (pt 1352 256))
+(junction (pt 1384 256))
+(junction (pt 1416 256))
 (text "SINAL DO COMPARADOR" (rect 560 504 707 518)(font "Arial" (font_size 8)))
 (text "ARMAZENA SENHA DO USER" (rect 368 32 539 46)(font "Arial" (font_size 8)))
 (text "ARMAZENA SENHA DO COFRE" (rect 704 224 883 238)(font "Arial" (font_size 8)))

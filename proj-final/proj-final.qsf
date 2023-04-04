@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16F484C6
-set_global_assignment -name TOP_LEVEL_ENTITY display_todos
+set_global_assignment -name TOP_LEVEL_ENTITY reg_decod_regUser
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:27:34  MARCH 31, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -52,7 +52,7 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name BDF_FILE "proj-final.bdf"
 set_global_assignment -name BDF_FILE reg4bits.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE reg4bits.vwf
-set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/Guto/Documents/UFRGS/CircuitosDigitais/trabalhofinal/fechaduraEletronica-VHDL/proj-final/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim/" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name BDF_FILE decod4x16.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE decod4x16.vwf
@@ -78,8 +78,8 @@ set_global_assignment -name BDF_FILE btn_Sincrono.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE btn_sincrono.vwf
 set_global_assignment -name BDF_FILE divisor_clock.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE comparador.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE display_todos.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE display_todos.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
