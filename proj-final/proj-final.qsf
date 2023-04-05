@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16F484C6
-set_global_assignment -name TOP_LEVEL_ENTITY reg_decod_regUser
+set_global_assignment -name TOP_LEVEL_ENTITY divisor_clock
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:27:34  MARCH 31, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -79,6 +79,51 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE btn_sincrono.vwf
 set_global_assignment -name BDF_FILE divisor_clock.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE comparador.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE display_todos.vwf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_H2 -to btn_seleciona
+set_location_assignment PIN_G3 -to btn_troca
+set_location_assignment PIN_F1 -to btn_inc
+set_location_assignment PIN_J6 -to change_pass
+set_location_assignment PIN_G21 -to CLK
+set_location_assignment PIN_E11 -to SAIDAD[0]
+set_location_assignment PIN_F11 -to SAIDAD[1]
+set_location_assignment PIN_H12 -to SAIDAD[2]
+set_location_assignment PIN_H13 -to SAIDAD[3]
+set_location_assignment PIN_G12 -to SAIDAD[4]
+set_location_assignment PIN_F12 -to SAIDAD[5]
+set_location_assignment PIN_F13 -to SAIDAD[6]
+set_location_assignment PIN_A13 -to SAIDAMD[0]
+set_location_assignment PIN_B13 -to SAIDAMD[1]
+set_location_assignment PIN_C13 -to SAIDAMD[2]
+set_location_assignment PIN_A14 -to SAIDAMD[3]
+set_location_assignment PIN_B14 -to SAIDAMD[4]
+set_location_assignment PIN_E14 -to SAIDAMD[5]
+set_location_assignment PIN_A15 -to SAIDAMD[6]
+set_location_assignment PIN_F14 -to SAIDAME[6]
+set_location_assignment PIN_B17 -to SAIDAME[5]
+set_location_assignment PIN_A17 -to SAIDAME[4]
+set_location_assignment PIN_E15 -to SAIDAME[3]
+set_location_assignment PIN_B16 -to SAIDAME[2]
+set_location_assignment PIN_A16 -to SAIDAME[1]
+set_location_assignment PIN_D15 -to SAIDAME[0]
+set_location_assignment PIN_G15 -to SAIDAE[6]
+set_location_assignment PIN_D19 -to SAIDAE[5]
+set_location_assignment PIN_C19 -to SAIDAE[4]
+set_location_assignment PIN_B19 -to SAIDAE[3]
+set_location_assignment PIN_A19 -to SAIDAE[2]
+set_location_assignment PIN_F15 -to SAIDAE[1]
+set_location_assignment PIN_B18 -to SAIDAE[0]
+set_global_assignment -name BDF_FILE leds.bdf
+set_location_assignment PIN_B1 -to B1
+set_location_assignment PIN_B2 -to B2
+set_location_assignment PIN_C1 -to C1
+set_location_assignment PIN_C2 -to C2
+set_location_assignment PIN_E1 -to E1
+set_location_assignment PIN_F2 -to F2
+set_location_assignment PIN_H1 -to H1
+set_location_assignment PIN_J1 -to J1
+set_location_assignment PIN_J2 -to J2
+set_location_assignment PIN_J3 -to J3
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

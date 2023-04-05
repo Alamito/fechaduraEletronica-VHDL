@@ -1,5 +1,5 @@
 EDA Netlist Writer report for proj-final
-Mon Apr 03 21:47:09 2023
+Tue Apr 04 11:57:29 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -9,8 +9,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   1. Legal Notice
   2. EDA Netlist Writer Summary
   3. Simulation Settings
-  4. Simulation Generated Files
-  5. EDA Netlist Writer Messages
+  4. EDA Netlist Writer Messages
 
 
 
@@ -36,11 +35,11 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Apr 03 21:47:09 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Apr 04 11:57:29 2023 ;
 ; Revision Name             ; proj-final                            ;
-; Top-level Entity Name     ; reg_decod_regUser                     ;
+; Top-level Entity Name     ; divisor_clock                         ;
 ; Family                    ; Cyclone III                           ;
-; Simulation Files Creation ; Successful                            ;
+; Simulation Files Creation ; Failed                                ;
 +---------------------------+---------------------------------------+
 
 
@@ -65,28 +64,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                    ;
-+-----------------------------------------------------------------------------------------------+
-; Generated Files                                                                               ;
-+-----------------------------------------------------------------------------------------------+
-; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim//proj-final.vo ;
-+-----------------------------------------------------------------------------------------------+
-
-
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Apr 03 21:47:08 2023
+    Info: Processing started: Tue Apr 04 11:57:29 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off proj-final -c proj-final
-Info (204019): Generated file proj-final.vo in folder "C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4553 megabytes
-    Info: Processing ended: Mon Apr 03 21:47:09 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 402 megabytes
+    Info: Processing ended: Tue Apr 04 11:57:29 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
