@@ -1,5 +1,5 @@
 Flow report for proj-final
-Tue Apr 04 11:57:29 2023
+Tue Apr 11 12:03:31 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 04 11:57:29 2023      ;
+; Flow Status                        ; Successful - Tue Apr 11 12:03:31 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; proj-final                                 ;
-; Top-level Entity Name              ; divisor_clock                              ;
+; Top-level Entity Name              ; proj_final_16bits                          ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 47 / 15,408 ( < 1 % )                      ;
-;     Total combinational functions  ; 24 / 15,408 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 24 / 15,408 ( < 1 % )                      ;
-; Total registers                    ; 24                                         ;
-; Total pins                         ; 2 / 347 ( < 1 % )                          ;
+; Total logic elements               ; 81 / 15,408 ( < 1 % )                      ;
+;     Total combinational functions  ; 74 / 15,408 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 42 / 15,408 ( < 1 % )                      ;
+; Total registers                    ; 42                                         ;
+; Total pins                         ; 63 / 347 ( 18 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
@@ -64,31 +64,31 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/04/2023 11:57:06 ;
+; Start date & time ; 04/11/2023 12:03:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proj-final          ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                       ;
-+-------------------------------------+---------------------------------------------------------------------------------+---------------+---------------+----------------+
-; Assignment Name                     ; Value                                                                           ; Default Value ; Entity Name   ; Section Id     ;
-+-------------------------------------+---------------------------------------------------------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 180720257645897.168062022600872                                                 ; --            ; --            ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                              ; --            ; --            ; eda_simulation ;
-; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/Alamito/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim/ ; --            ; --            ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                     ; --            ; --            ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                       ; <None>        ; --            ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                              ; --            ; --            ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                               ; --            ; --            ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                            ; --            ; --            ; --             ;
-; PARTITION_COLOR                     ; 16764057                                                                        ; --            ; divisor_clock ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                           ; --            ; divisor_clock ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                                          ; --            ; divisor_clock ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                    ; --            ; --            ; --             ;
-; TOP_LEVEL_ENTITY                    ; divisor_clock                                                                   ; proj-final    ; --            ; --             ;
-+-------------------------------------+---------------------------------------------------------------------------------+---------------+---------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                         ;
++-------------------------------------+-------------------------------------------------------------------------------+---------------+-------------------+----------------+
+; Assignment Name                     ; Value                                                                         ; Default Value ; Entity Name       ; Section Id     ;
++-------------------------------------+-------------------------------------------------------------------------------+---------------+-------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 180720257645897.168122538606112                                               ; --            ; --                ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                            ; --            ; --                ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/aluno/Documents/fechaduraEletronica-VHDL/proj-final/simulation/qsim/ ; --            ; --                ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                   ; --            ; --                ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                     ; <None>        ; --                ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                            ; --            ; --                ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                             ; --            ; --                ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                          ; --            ; --                ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                      ; --            ; proj_final_16bits ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                         ; --            ; proj_final_16bits ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                        ; --            ; proj_final_16bits ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                  ; --            ; --                ; --             ;
+; TOP_LEVEL_ENTITY                    ; proj_final_16bits                                                             ; proj-final    ; --                ; --             ;
++-------------------------------------+-------------------------------------------------------------------------------+---------------+-------------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -96,12 +96,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 498 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:10     ; 1.0                     ; 715 MB              ; 00:00:09                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 439 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 474 MB              ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 390 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 506 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 749 MB              ; 00:00:11                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 433 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 469 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 386 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:20                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

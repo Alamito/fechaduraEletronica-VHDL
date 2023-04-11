@@ -18,24 +18,30 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/03/2023 21:04:53"
+// Generated on "04/10/2023 21:20:31"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    display_todos
+// Verilog Self-Checking Test Bench (with test vectors) for design :    display16bits_todos
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module display_todos_vlg_sample_tst(
-	D,
+module display16bits_todos_vlg_sample_tst(
+	DD,
+	DE,
+	DMD,
+	DME,
 	sampler_tx
 );
-input [3:0] D;
+input [3:0] DD;
+input [3:0] DE;
+input [3:0] DMD;
+input [3:0] DME;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(D)
+always @(DD or DE or DMD or DME)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -54,7 +60,7 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module display_todos_vlg_check_tst (
+module display16bits_todos_vlg_check_tst (
 	SAIDAD,
 	SAIDAE,
 	SAIDAMD,
@@ -658,10 +664,13 @@ $finish;
 end 
 endmodule
 
-module display_todos_vlg_vec_tst();
+module display16bits_todos_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [3:0] D;
+reg [3:0] DD;
+reg [3:0] DE;
+reg [3:0] DMD;
+reg [3:0] DME;
 // wires                                               
 wire [6:0] SAIDAD;
 wire [6:0] SAIDAE;
@@ -671,57 +680,176 @@ wire [6:0] SAIDAME;
 wire sampler;                             
 
 // assign statements (if any)                          
-display_todos i1 (
+display16bits_todos i1 (
 // port map - connection between master ports and signals/registers   
-	.D(D),
+	.DD(DD),
+	.DE(DE),
+	.DMD(DMD),
+	.DME(DME),
 	.SAIDAD(SAIDAD),
 	.SAIDAE(SAIDAE),
 	.SAIDAMD(SAIDAMD),
 	.SAIDAME(SAIDAME)
 );
-// D[ 3 ]
-initial
-begin
-	D[3] = 1'b0;
-	D[3] = #640000 1'b1;
-end 
-// D[ 2 ]
-initial
-begin
-	D[2] = 1'b0;
-	D[2] = #320000 1'b1;
-	D[2] = #320000 1'b0;
-	D[2] = #320000 1'b1;
-end 
-// D[ 1 ]
-initial
-begin
-	repeat(3)
-	begin
-		D[1] = 1'b0;
-		D[1] = #160000 1'b1;
-		# 160000;
-	end
-	D[1] = 1'b0;
-end 
-// D[ 0 ]
+// DD[ 3 ]
 initial
 begin
 	repeat(6)
 	begin
-		D[0] = 1'b0;
-		D[0] = #80000 1'b1;
+		DD[3] = 1'b0;
+		DD[3] = #80000 1'b1;
 		# 80000;
 	end
-	D[0] = 1'b0;
+	DD[3] = 1'b0;
+end 
+// DD[ 2 ]
+initial
+begin
+	repeat(12)
+	begin
+		DD[2] = 1'b0;
+		DD[2] = #40000 1'b1;
+		# 40000;
+	end
+	DD[2] = 1'b0;
+end 
+// DD[ 1 ]
+always
+begin
+	DD[1] = 1'b0;
+	DD[1] = #20000 1'b1;
+	#20000;
+end 
+// DD[ 0 ]
+always
+begin
+	DD[0] = 1'b0;
+	DD[0] = #10000 1'b1;
+	#10000;
+end 
+// DE[ 3 ]
+initial
+begin
+	repeat(3)
+	begin
+		DE[3] = 1'b0;
+		DE[3] = #160000 1'b1;
+		# 160000;
+	end
+	DE[3] = 1'b0;
+end 
+// DE[ 2 ]
+initial
+begin
+	repeat(6)
+	begin
+		DE[2] = 1'b0;
+		DE[2] = #80000 1'b1;
+		# 80000;
+	end
+	DE[2] = 1'b0;
+end 
+// DE[ 1 ]
+initial
+begin
+	repeat(12)
+	begin
+		DE[1] = 1'b0;
+		DE[1] = #40000 1'b1;
+		# 40000;
+	end
+	DE[1] = 1'b0;
+end 
+// DE[ 0 ]
+always
+begin
+	DE[0] = 1'b0;
+	DE[0] = #20000 1'b1;
+	#20000;
+end 
+// DMD[ 3 ]
+initial
+begin
+	DMD[3] = 1'b0;
+	DMD[3] = #320000 1'b1;
+	DMD[3] = #320000 1'b0;
+	DMD[3] = #320000 1'b1;
+end 
+// DMD[ 2 ]
+initial
+begin
+	repeat(3)
+	begin
+		DMD[2] = 1'b0;
+		DMD[2] = #160000 1'b1;
+		# 160000;
+	end
+	DMD[2] = 1'b0;
+end 
+// DMD[ 1 ]
+initial
+begin
+	repeat(6)
+	begin
+		DMD[1] = 1'b0;
+		DMD[1] = #80000 1'b1;
+		# 80000;
+	end
+	DMD[1] = 1'b0;
+end 
+// DMD[ 0 ]
+initial
+begin
+	repeat(12)
+	begin
+		DMD[0] = 1'b0;
+		DMD[0] = #40000 1'b1;
+		# 40000;
+	end
+	DMD[0] = 1'b0;
+end 
+// DME[ 3 ]
+initial
+begin
+	DME[3] = 1'b0;
+	DME[3] = #400000 1'b1;
+	DME[3] = #400000 1'b0;
+end 
+// DME[ 2 ]
+initial
+begin
+	repeat(2)
+	begin
+		DME[2] = 1'b0;
+		DME[2] = #200000 1'b1;
+		# 200000;
+	end
+	DME[2] = 1'b0;
+end 
+// DME[ 1 ]
+always
+begin
+	DME[1] = 1'b0;
+	DME[1] = #100000 1'b1;
+	#100000;
+end 
+// DME[ 0 ]
+always
+begin
+	DME[0] = 1'b0;
+	DME[0] = #50000 1'b1;
+	#50000;
 end 
 
-display_todos_vlg_sample_tst tb_sample (
-	.D(D),
+display16bits_todos_vlg_sample_tst tb_sample (
+	.DD(DD),
+	.DE(DE),
+	.DMD(DMD),
+	.DME(DME),
 	.sampler_tx(sampler)
 );
 
-display_todos_vlg_check_tst tb_out(
+display16bits_todos_vlg_check_tst tb_out(
 	.SAIDAD(SAIDAD),
 	.SAIDAE(SAIDAE),
 	.SAIDAMD(SAIDAMD),

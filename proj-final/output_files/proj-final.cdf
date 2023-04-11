@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("C:/Users/aluno/Desktop/fechaduraEletronica-VHDL/proj-final/output_files/") File("proj-final.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16F484) Path("C:/Users/aluno/Documents/fechaduraEletronica-VHDL/proj-final/output_files/") File("proj-final.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
