@@ -1,5 +1,5 @@
 # 🔒 Fechadura Eletrônica 💸
-[![NPM](https://img.shields.io/github/license/Alamito/Dell-ChargeTransport-Nodejs)](https://github.com/Alamito/Dell-ChargeTransport-Nodejs/blob/main/LICENSE)
+[![NPM](https://img.shields.io/github/license/Alamito/fechaduraEletronica-VHDL)](https://github.com/Alamito/fechaduraEletronica-VHDL/blob/main/LICENSE)
 
 # 📜 Sobre o projeto 📜
 <p align="justify">
