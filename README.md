@@ -38,7 +38,7 @@ Contador e decodificador que selecionam os registradores:
 O comparador de 32 bits é responsável por verificar se a senha armazenada no registrador do usuário é igual a senha armazenada no registrador do cofre, ou seja, faz a comparação entre registrador do usuário e registrador do cofre e, caso a combinação de dígitos seja igual, um sinal de nível alto é posto na saída do comparador.
 
 Comparador de 32 bits:
-![image](https://user-images.githubusercontent.com/102616676/232074017-bc9f0869-6e4f-4ba5-934c-9dc416e5e502.png)
+![comp_todos](https://user-images.githubusercontent.com/102616676/232895863-634991fa-5c9e-4c37-9cdf-b79b6fcffc98.png)
 
 ### DISPLAY DE SETE SEGMENTOS
 <p align="justify">
