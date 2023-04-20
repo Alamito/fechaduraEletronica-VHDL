@@ -60,7 +60,7 @@ Simulação do circuito de debouncer:
 ![image](https://user-images.githubusercontent.com/102616676/232073748-708af391-6874-4df2-9c37-1e30f84663d2.png)
 
 <p align="justify">
-No caso da figura acima, o input “X” representa o sinal do botão e “Y” o output do próprio botão que no caso se transformou de longo período de nível alto para um curto período. Esse comportamento ajuda a minimizar esses problemas, transformando o sinal de entrada do botão em uma forma mais estável e confiável de entrada para o circuito, pois ao converter um pressionamento de longa duração em um sinal de apenas dois ciclos de clock, o circuito garante que o sinal seja registrado apenas uma vez e que seja mantido em um estado estável para o resto da operação do circuito.
+No caso da figura acima, o input “X” representa o sinal do botão e “Y” o output do próprio botão que no caso se transformou de longo período de nível alto para um curto período. Esse comportamento ajuda a minimizar problemas, pois ao converter um pressionamento de longa duração em um sinal de apenas dois ciclos de clock, o circuito garante que o sinal seja registrado apenas uma vez e que seja mantido em um estado estável para o resto da operação do circuito.
 </p>
 
 ### RESUMO DAS FUNCIONALIDADES
